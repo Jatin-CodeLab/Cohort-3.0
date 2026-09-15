@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task Manager - 🧑‍💼</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link
+			rel="shortcut icon"
+			href="./ChatGPT Image Jun 19, 2026, 01_36_16 AM.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+		/>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="verticalHeader">
+				<div class="one">
+					<div class="weeklyName">
+						<h1 id="weeklyNameTag"></h1>
+					</div>
+					<div class="menu">
+						<span>Menu</span>
+						<p>All</p>
+						<p>Pending</p>
+						<p>Working</p>
+						<p>Completed</p>
+					</div>
+				</div>
+				<div class="theme">
+					<button id="themeBtn">
+						Dark <i class="fi fi-rr-moon-stars"></i>
+					</button>
+				</div>
+			</div>
+			<div class="taskManagerScreen">
+				<div class="horizontalHeader">
+					<h1 id="taskName">Task Manager.</h1>
+					<p id="yourName"></p>
+					<button id="newTask">
+						<i class="fi fi-br-plus"></i>
+						<p>New Task</p>
+					</button>
+				</div>
+				<div class="taskListShowCase">
+                    <div class="taskOne">
+                        <h1>Hare Krishna</h1>
+                        <div class="paiority">
+                            <h1>High</h1>
+                        </div>
+                        <div class="buton">
+                            <i class="fi fi-br-pen-field"></i>
+                            <i class="fi fi-sr-trash"></i>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="formScreen">
+				<form>
+					<input type="text" required placeholder="enter your task..." />
+					<select name="" id="">
+						<option value="pending">Pending</option>
+						<option value="working">Working</option>
+						<option value="completed">Completed</option>
+					</select>
+					<select name="" id="">
+						<option value="high">High</option>
+						<option value="medium">Medium</option>
+						<option value="low">Low</option>
+					</select>
+					<button type="submit">Add...</button>
+				</form>
+                <div class="close">
+<i class="fi fi-rr-circle-xmark"></i>
+                </div>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

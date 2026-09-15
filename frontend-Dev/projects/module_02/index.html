@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+
+    <h1>Task Manager</h1>
+
+    <button id="btn">Dark Mode</button>
+
+    <div class="box">
+
+        <h2>Add Task</h2>
+
+        <form id="form">
+
+            <label>Task Name</label>
+            <input type="text" id="taskInput" value="My Task">
+
+            <br><br>
+
+            <label>Category</label>
+
+            <select id="category">
+                <option>Work</option>
+                <option>Personal</option>
+                <option>Education</option>
+                <option>Urgent</option>
+            </select>
+
+            <br><br>
+
+            <button>Add</button>
+
+        </form>
+
+    </div>
+
+    <div class="box">
+
+        <h2>Property and Attribute</h2>
+
+        <p>Property Value:</p>
+        <p id="prop"></p>
+
+        <p>Attribute Value:</p>
+        <p id="attr"></p>
+
+    </div>
+
+    <div class="box">
+
+        <h2>Task List</h2>
+
+        <div id="taskList">
+
+        </div>
+
+    </div>
+
+    <div class="box">
+
+        <h2>Browser Flow</h2>
+
+        <p>
+            HTML → Parsing → DOM → Render
+        </p>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

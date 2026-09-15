@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <header>
+
+        <h1>Productivity Dashboard</h1>
+
+        <button id="themeBtn">
+            Dark Mode
+        </button>
+
+    </header>
+
+
+
+    <section class="dateTime">
+
+        <h2 id="date"></h2>
+
+        <h3 id="time"></h3>
+
+    </section>
+
+
+
+    <section class="dashboard">
+
+        <div class="card" data-feature="todo">
+            Todo List
+        </div>
+
+        <div class="card" data-feature="planner">
+            Daily Planner
+        </div>
+
+        <div class="card" data-feature="goal">
+            Daily Goals
+        </div>
+
+        <div class="card" data-feature="timer">
+            Pomodoro Timer
+        </div>
+
+        <div class="card" data-feature="quote">
+            Motivation Quote
+        </div>
+
+        <div class="card" data-feature="weather">
+            Weather
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Todo Section -->
+
+    <!-- <section class="feature" id="todo">
+
+        <button class="backBtn">
+            Back
+        </button>
+
+        <h2>Todo List</h2>
+
+    </section> -->
+
+    <!-- ========================= -->
+<!-- Todo List Feature -->
+<!-- Replace your old Todo section with this -->
+<!-- ========================= -->
+
+<section class="feature" id="todo">
+
+    <div class="todo-container">
+
+        <button class="backBtn">⬅ Back</button>
+
+        <h2>Todo List</h2>
+
+        <!-- Add Task -->
+
+        <div class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <button id="addTaskBtn">
+                Add Task
+            </button>
+
+        </div>
+
+        <!-- Task Information -->
+
+        <div class="task-info">
+
+            <p>Total Tasks :
+                <span id="totalTask">
+                    0
+                </span>
+            </p>
+
+            <p>Completed :
+                <span id="completedTask">
+                    0
+                </span>
+            </p>
+
+            <p>Important :
+                <span id="importantTask">
+                    0
+                </span>
+            </p>
+
+        </div>
+
+        <!-- Task List -->
+
+        <ul id="taskList">
+
+            <!-- JavaScript will create tasks here -->
+
+            <!-- Example
+
+            <li class="task">
+
+                <span class="taskText">
+                    Learn JavaScript
+                </span>
+
+                <div class="taskBtns">
+
+                    <button class="importantBtn">
+                        ⭐
+                    </button>
+
+                    <button class="completeBtn">
+                        ✔
+                    </button>
+
+                    <button class="deleteBtn">
+                        🗑
+                    </button>
+
+                </div>
+
+            </li>
+
+            -->
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Planner -->
+
+   <!-- ========================= -->
+<!-- Daily Planner Section -->
+<!-- ========================= -->
+
+<section class="feature" id="planner">
+
+    <div class="planner-container">
+
+        <button class="backBtn">
+            ⬅ Back
+        </button>
+
+        <h2>Daily Planner</h2>
+
+        <p class="planner-text">
+            Plan Your Day
+        </p>
+
+        <!-- 9 AM -->
+
+        <div class="planner-row">
+
+            <h3>09:00 AM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="9AM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 10 AM -->
+
+        <div class="planner-row">
+
+            <h3>10:00 AM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="10AM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 11 AM -->
+
+        <div class="planner-row">
+
+            <h3>11:00 AM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="11AM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 12 PM -->
+
+        <div class="planner-row">
+
+            <h3>12:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="12PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 1 PM -->
+
+        <div class="planner-row">
+
+            <h3>01:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="1PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 2 PM -->
+
+        <div class="planner-row">
+
+            <h3>02:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="2PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 3 PM -->
+
+        <div class="planner-row">
+
+            <h3>03:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="3PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 4 PM -->
+
+        <div class="planner-row">
+
+            <h3>04:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="4PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+        <!-- 5 PM -->
+
+        <div class="planner-row">
+
+            <h3>05:00 PM</h3>
+
+            <input
+                type="text"
+                class="plannerInput"
+                data-time="5PM"
+                placeholder="Write your plan..."
+            >
+
+            <button class="saveBtn">
+                Save
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Goals -->
+
+  <section class="feature" id="goal">
+
+    <div class="goal-container">
+
+        <button class="backBtn">⬅ Back</button>
+
+        <h2>Daily Goals</h2>
+
+        <div class="goal-input-box">
+
+            <input
+                type="text"
+                id="goalInput"
+                placeholder="Enter your goal..."
+            >
+
+            <button id="addGoalBtn">
+                Add Goal
+            </button>
+
+        </div>
+
+        <div class="goal-info">
+
+            <p>
+                Total Goals :
+                <span id="totalGoal">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Completed :
+                <span id="completedGoal">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Progress :
+                <span id="goalProgress">
+                    0 / 0
+                </span>
+            </p>
+
+        </div>
+
+        <ul id="goalList">
+
+            <!-- Goals will come here -->
+
+            <!-- Example
+
+            <li class="goal">
+
+                <span class="goalText">
+                    Complete JavaScript Project
+                </span>
+
+                <div class="goalBtns">
+
+                    <button class="goalCompleteBtn">
+                        ✔
+                    </button>
+
+                    <button class="goalDeleteBtn">
+                        🗑
+                    </button>
+
+                </div>
+
+            </li>
+
+            -->
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Timer -->
+
+   <section class="feature" id="timer">
+
+    <div class="timer-container">
+
+        <button class="backBtn">
+            ⬅ Back
+        </button>
+
+        <h2>Pomodoro Timer</h2>
+
+        <p class="sessionText">
+            Work Session
+        </p>
+
+        <h1 id="timerDisplay">
+            25:00
+        </h1>
+
+        <div class="timerBtns">
+
+            <button id="startBtn">
+                Start
+            </button>
+
+            <button id="pauseBtn">
+                Pause
+            </button>
+
+            <button id="resetBtn">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Quote -->
+
+    <section class="feature" id="quote">
+
+    <div class="quote-container">
+
+        <button class="backBtn">
+            ⬅ Back
+        </button>
+
+        <h2>Motivation Quote</h2>
+
+        <div class="quote-box">
+
+            <p id="quoteText">
+                Click the button to get a motivational quote.
+            </p>
+
+            <h3 id="quoteAuthor">
+                - Unknown
+            </h3>
+
+        </div>
+
+        <button id="newQuoteBtn">
+            New Quote
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- Weather -->
+
+<section class="feature" id="weather">
+
+    <div class="weather-container">
+
+        <button class="backBtn">
+            ⬅ Back
+        </button>
+
+        <h2>Weather</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter City Name"
+            >
+
+            <button id="searchWeatherBtn">
+                Search
+            </button>
+
+        </div>
+
+        <div class="weather-box">
+
+            <h1 id="cityName">
+                City
+            </h1>
+
+            <h2 id="temperature">
+                -- °C
+            </h2>
+
+            <p id="weatherType">
+                Weather
+            </p>
+
+            <p>
+                Humidity :
+                <span id="humidity">
+                    --
+                </span> %
+            </p>
+
+            <p>
+                Wind Speed :
+                <span id="windSpeed">
+                    --
+                </span> km/h
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

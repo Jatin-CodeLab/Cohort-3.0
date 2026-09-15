@@ -1,0 +1,107 @@
+import React from "react";
+import { useNavigate } from "react-router";
+import { useForm } from "react-hook-form";
+import { Auth } from "../Context/AppContext";
+import { useContext } from "react";
+import { toast } from "react-toastify";
+function LoginPage() {
+	const { registerUsers, loggedInUsers, setLoggedInUsers } = useContext(Auth);
+	let navigate = useNavigate();
+	let {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm();
+	let formSubmit = (data) => {
+		let user = registerUsers.find((val) => {
+			return val.email === data.email && val.password === data.password;
+		});
+		if (!user) {
+			toast.error("invalid user  !");
+			reset();
+			return;
+		}
+		setLoggedInUsers(user);
+		localStorage.setItem("loggedingUser", JSON.stringify(user));
+		toast.success("Login Successfuly");
+		navigate("/main");
+		reset();
+	};
+
+	return (
+		<div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+			<div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+				{/* Heading */}
+				<h1 className="text-3xl font-bold text-center text-gray-800">
+					Welcome Back
+				</h1>
+				<p className="text-center text-gray-500 mt-2">
+					Sign in to your account
+				</p>
+
+				{/* Form */}
+				<form onSubmit={handleSubmit(formSubmit)} className="mt-8 space-y-5">
+					{/* Email */}
+					<div>
+						<label className="block text-sm font-medium text-gray-700 mb-2">
+							Email
+						</label>
+						<input
+							{...register("email", { required: "email is required !" })}
+							type="email"
+							placeholder="Enter your email"
+							className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+						/>
+						{errors.email && (
+							<p className="text-red-500 m-1">{errors.email.message}</p>
+						)}{" "}
+					</div>
+
+					{/* Password */}
+					<div>
+						<label className="block text-sm font-medium text-gray-700 mb-2">
+							Password
+						</label>
+						<input
+							{...register("password", {
+								required: "password is required !",
+								minLength: {
+									value: 6,
+									message: "Minimum 6 character is required !",
+								},
+							})}
+							type="password"
+							placeholder="Enter your password"
+							className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+						/>
+						{errors.password && (
+							<p className="text-red-500 m-1">{errors.password.message}</p>
+						)}
+					</div>
+
+					{/* Login Button */}
+					<button
+						type="submit"
+						className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+					>
+						Login
+					</button>
+				</form>
+
+				{/* Register */}
+				<p className="text-center text-gray-600 mt-6">
+					Don't have an account?{" "}
+					<button
+						onClick={() => navigate("/register")}
+						className="text-blue-600 font-semibold hover:underline"
+					>
+						Register
+					</button>
+				</p>
+			</div>
+		</div>
+	);
+}
+
+export default LoginPage;

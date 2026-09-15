@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* text-decoration: none; */
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-width: none;
+	font-family: "Google Sans Flex", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"wdth" 100,
+		"GRAD" 0,
+		"ROND" 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 450;
+}
+
+h1 {
+	font-size: clamp(2.5rem, 4.5vw, 3.2rem);
+}
+
+h2 {
+	font-size: clamp(2.1rem, 3.8vw, 2.8rem);
+}
+
+h3 {
+	font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+h4 {
+	font-size: clamp(1.5rem, 2.3vw, 2rem);
+}
+
+h5 {
+	font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+}
+
+h6 {
+	font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+.main {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content {
+	border-radius: 20px;
+	width: 70%;
+	height: 95%;
+	display: grid;
+	grid-template-rows: 1fr 1fr 0.8fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"one two three four"
+		"one six six four"
+		"five six six nine"
+		"seven seven eight nine";
+	gap: 5px;
+
+	.co {
+		border-radius: 20px;
+		padding: 1rem;
+	}
+
+	.oneBox {
+		background: url(./fashion_blog_menswear-1400x788.jpg);
+		background-size: 100% 100%;
+		grid-area: one;
+		display: flex;
+		align-items: end;
+		justify-content: space-around;
+		padding-bottom: 1.5rem;
+		position: relative;
+
+		.img {
+			position: absolute;
+			width: 15%;
+			top: 5%;
+			left: 5%;
+		}
+
+		.oneBar {
+			width: 70px;
+			height: 50px;
+			border-radius: 10px;
+			background: rgba(58, 58, 58, 0.321); /* Semi-transparent color */
+			backdrop-filter: blur(5px); /* The blur effect */
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			color: white;
+			gap: 5px;
+			padding: 0px 5px;
+			img {
+				width: 45%;
+			}
+		}
+		.twoBar {
+			width: 70px;
+			height: 50px;
+			border-radius: 10px;
+			background-color: #fed703;
+			background: rgba(58, 58, 58, 0.321); /* Semi-transparent color */
+			backdrop-filter: blur(5px); /* The blur effect */
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			color: white;
+			gap: 5px;
+			padding: 0px 5px;
+			img {
+				width: 45%;
+			}
+		}
+		.threeBar {
+			width: 70px;
+			height: 50px;
+			border-radius: 10px;
+			background-color: #fed703;
+			background: rgba(58, 58, 58, 0.321); /* Semi-transparent color */
+			backdrop-filter: blur(5px); /* The blur effect */
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			color: white;
+			gap: 5px;
+			padding: 0px 5px;
+			img {
+				width: 45%;
+			}
+		}
+	}
+	.twoBox {
+		background-color: #fed703;
+		grid-area: two;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-around;
+		.img {
+			width: 20%;
+		}
+
+		span {
+			font-size: 1.7rem;
+		}
+
+		.btn {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			img {
+				width: 45%;
+			}
+		}
+	}
+	.threeBox {
+		background-color: rgb(255, 255, 255);
+		grid-area: three;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		gap: 2rem;
+
+		.text {
+			h2 {
+				font-weight: 900;
+			}
+		}
+		.pa {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+	}
+	.fourBox {
+		background-color: rgb(255, 255, 255);
+		grid-area: four;
+		padding: 1rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-around;
+
+		.text1 {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			gap: 1rem;
+
+			img {
+				width: 15%;
+			}
+		}
+		.text2 {
+			h1 {
+				font-weight: bolder;
+			}
+		}
+		.btn {
+			width: 100%;
+			height: 6.5vw;
+			background-color: #ecb1a3;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: space-between;
+			padding: 1rem 1rem;
+			gap: 2rem;
+			.on {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+				justify-content: start;
+				img {
+					width: 20%;
+				}
+			}
+			p {
+				font-weight: 700;
+			}
+		}
+	}
+	.fiveBox {
+		background-color: rgb(255, 255, 255);
+		grid-area: five;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-between;
+
+		h1 {
+			font-size: 1.7rem;
+		}
+		.contentText {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			img {
+				width: 15%;
+			}
+			span {
+				font-weight: 800;
+			}
+		}
+	}
+	.sixBox {
+		background-color: #fef6e1;
+		grid-area: six;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 6rem;
+			font-family: "Bungee", sans-serif;
+			img {
+				width: 30%;
+			}
+		}
+	}
+	.sevenBox {
+		background-color: #ecb1a3;
+		grid-area: seven;
+		display: flex;
+		align-items: center;
+		/* justify-content: space-around; */
+		gap: 8rem;
+
+			img {
+				width: 40%;
+				border-radius: 10px;
+			}
+		.textContent {
+
+			.text {
+				h2{
+					font-size: 2rem;
+					font-weight: 800;
+				}
+			}
+			.text2 {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 4rem;
+				.imgs {
+					width: 50%;
+					height: 40%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					img {
+						/* top: 0%; */
+						width: 20%;
+						height: 30%;
+						border-radius: 50%;
+						z-index: 2;
+					}
+				}
+			}
+		}
+	}
+	.eightBox {
+		background-color: rgb(102, 102, 102);
+		grid-area: eight;
+		position: relative;
+		display: flex;
+		align-items: end;
+		justify-content: center;
+		img{
+			position: absolute;
+			width: 70%;
+			bottom: 0%;
+		}
+	}
+	.nineBox {
+		background-color: #ecb1a3;
+		grid-area: nine;
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.mobile-warning {
+	display: none;
+}
+
+@media (max-width: 1424px) {
+	.mobile-warning {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		font-size: 24px;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.main-content {
+		display: none;
+	}
+}

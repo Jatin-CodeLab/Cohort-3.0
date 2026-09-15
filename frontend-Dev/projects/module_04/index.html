@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>E--Comm</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="main">
+			<nav>
+				<h1>E--Comm</h1>
+				<button 
+                id="cretaeProductLargeScreenBtn"
+                class="notResponsive">
+					<i class="fa-solid fa-plus" style="color: rgb(0, 0, 0)"></i>
+					<p>Create Product</p>
+				</button>
+				<button class="responsive">
+					<i class="fa-solid fa-plus" style="color: rgb(0, 0, 0)"></i>
+				</button>
+			</nav>
+
+			<div class="products">
+				<!-- <div class="product-cards">
+					<div class="img">
+						<img
+							src="https://i.pinimg.com/1200x/b9/7c/d3/b97cd34246acb95886b5d3b4c7aa5e84.jpg"
+							alt="bird"
+						/>
+					</div>
+					<div class="text">
+						<p>Name</p>
+						<p>Discription</p>
+						<p>Price</p>
+					</div>
+					<div class="btn">
+						<button>Update</button>
+						<button>Delete</button>
+					</div>
+				</div> -->
+			</div>
+
+			<div class="form" id="fillTheForm">
+				<form>
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+					<h1>E--comm</h1>
+					<input type="text" placeholder="product_name" required/>
+					<input type="text" placeholder="discription" required/>
+					<input type="number" placeholder="price" required/>
+					<input type="url" placeholder="url" required/>
+					<button>Create</button>
+				</form>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

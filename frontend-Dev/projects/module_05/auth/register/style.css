@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-width: none;
+	font-family: "Google Sans Flex", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"wdth" 100,
+		"GRAD" 0,
+		"ROND" 0;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+.main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+form {
+	width: 30%;
+	/* height: 50%; */
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.heading {
+		color: white;
+	}
+
+	.heading{display: flex;
+		gap: .5rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		text-align: center;
+	}
+    .inputs{
+        width: 100%;
+        display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    gap: .5rem;
+
+    input{
+        width: 100%;
+        padding: 1rem 1rem 1rem 2rem;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        font-size: 1.3rem;
+    }
+    button{
+        width: 100%;
+        padding: 1rem 1rem 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        background-color: #0056B3;
+                border: none;
+        outline: none;
+        font-weight: 700;
+        color: white;
+    }
+	
+    }
+	p{
+		color: white;
+		a{
+			color: rgb(152, 131, 255);
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

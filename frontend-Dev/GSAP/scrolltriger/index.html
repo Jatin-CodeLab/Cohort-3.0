@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="../img//titleHeropng.png"
+			type="image/x-icon"
+		/>
+		<title>GSAP - ScrollTriger</title>
+		<!-- <link rel="stylesheet" href="./style.css"> -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				text-decoration: none;
+				list-style: none;
+				/* scrollbar-width: none; */
+			}
+
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			.page1 {
+				background: #2a7b9b;
+				background: linear-gradient(
+					90deg,
+					rgba(42, 123, 155, 1) 0%,
+					rgba(87, 199, 133, 1) 50%,
+					rgba(237, 221, 83, 1) 100%
+				);
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.page2 {
+				background: #3f5efb;
+				background: radial-gradient(
+					circle,
+					rgba(63, 94, 251, 1) 0%,
+					rgba(252, 70, 107, 1) 100%
+				);
+				width: 100%;
+				height: 100%;
+				display: flex;
+                flex-direction: column;
+				align-items: center;
+				justify-content: center;
+                font-size: 2rem;
+                gap: 1rem;
+
+                h1{
+                    padding: 10px;
+                    background-color: #ec38bc;
+                    color: white;
+                    border-radius: 10px;
+                }
+                h2{
+                    padding: 10px;
+                    background-color: #fdeff9;
+                    border-radius: 10px;
+                }
+
+		
+			}
+			.page3 {
+				background: #eeaeca;
+				background: radial-gradient(
+					circle,
+					rgba(238, 174, 202, 1) 0%,
+					rgba(148, 187, 233, 1) 100%
+				);
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.box1 {
+				background: #03001e; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+				width: 200px;
+				height: 200px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+				border-radius: 10px;
+			}
+			.box2 {
+				background: #03001e; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+				width: 200px;
+				height: 200px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+				border-radius: 10px;
+			}
+			.box3 {
+				background: #03001e; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#fdeff9,
+					#ec38bc,
+					#7303c0,
+					#03001e
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+				width: 200px;
+				height: 200px;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page1"><div class="box1"></div></div>
+		<div class="page2">
+            <h1>Hello krishna</h1>
+            <h2>hello madhav</h2>
+            <div class="box2"></div>
+        </div>
+		<div class="page3"><div class="box3"></div></div>
+
+
+		<!-- Script tags -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"
+			integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"
+			integrity="sha512-OaIE7ud4P04EhnBuhEcm0wQSceIxbi2pV03oBLS/+F6ampfxsnxcIxOp7H2eF9G7N0kEht0VAzOLG+dTLSo17Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="./script.js"></script>
+	</body>
+</html>

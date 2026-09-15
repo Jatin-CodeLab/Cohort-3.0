@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FinTrack</title>
+		<link
+			rel="shortcut icon"
+			href="./img/Screenshot 2026-07-02 140026.png"
+			type="image/x-icon"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="letf-side">
+				<div class="top">
+					<div class="logo">
+						<img
+							src="./img/Screenshot 2026-07-02 140026.png"
+							alt="site_main_(Screenshot 2026-07-02 140026.png)"
+							srcset=""
+						/>
+					</div>
+					<div class="text">
+						<h1>FinTrack Pro</h1>
+						<p>Enterprise Finance</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<button id="addForm">
+						<i class="ri-add-line"></i>
+						<p>Add Transaction</p>
+					</button>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="navbaar">
+					<div class="name">
+						<h1>Gesut</h1>
+					</div>
+					<div class="btns">
+						<button>logout</button>
+						<button>reset Transactions</button>
+					</div>
+				</div>
+				<div class="Financia_Overview">
+					<div class="cards">
+						<i class="ri-bank-fill"></i>
+						<div class="text">
+							<p>Current Balance</p>
+							<h3>0</h3>
+						</div>
+					</div>
+					<div class="cards">
+						<i class="ri-bank-fill"></i>
+						<div class="text">
+							<p>Total Income</p>
+							<h3>0</h3>
+						</div>
+					</div>
+					<div class="cards">
+						<i class="ri-bank-fill"></i>
+						<div class="text">
+							<p>Total Expense</p>
+							<h3>0</h3>
+						</div>
+					</div>
+					<div class="cards">
+						<i class="ri-bank-fill"></i>
+						<div class="text">
+							<p>Total Transactions</p>
+							<h3 id="totalTransactions">0</h3>
+						</div>
+					</div>
+				</div>
+				<div class="allTransactionChart">
+					<canvas id="myChart"></canvas>
+				</div>
+				<div class="alltransactionShow">
+					<h1>All Transactions</h1>
+					<div class="searchFillter">
+						<input type="text" placeholder="Search transactions..." />
+						<select name="" id="">
+							<option value="" selected disabled>All</option>
+							<option value="">Expense</option>
+							<option value="">Income</option>
+						</select>
+					</div>
+					<div class="transadtionShow">
+						<table>
+							<thead>
+								<tr>
+									<th>DATE</th>
+									<th>DESCRIPTION</th>
+									<th>CATEGORY</th>
+									<th>AMOUNT</th>
+									<th>Type</th>
+									<th>ACTIONS</th>
+								</tr>
+							</thead>
+
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- // hiden Part -->
+			<div class="form" id="showHideForm">
+				<form>
+					<div class="heading-closeing">
+						<h1>Add Transaction</h1>
+						<i class="ri-close-line" id="close"></i>
+					</div>
+					<div class="inputs">
+						<div class="in type">
+							<label for="">Type</label>
+							<select name="" id="Type" required>
+								<option value="Expense">Expense</option>
+								<option value="Income">Income</option>
+							</select>
+						</div>
+						<div class="in description">
+							<label for="">Description</label>
+							<input
+								type="text"
+								required
+								placeholder="e.g. Amazon, Salary, Coffee"
+							/>
+						</div>
+						<div class="inout amount-date">
+							<div class="in amount">
+								<label for="">Amount</label>
+								<input type="number" required />
+							</div>
+							<div class="in date">
+								<label for="date">Date</label>
+								<input type="date" id="date" required />
+							</div>
+						</div>
+						<div class="in category">
+							<label for="">Category</label>
+							<select name="" id="" required>
+								<option value="" selected disabled>
+									Select Expense Category
+								</option>
+								<option value="food">🍔 Food & Dining</option>
+								<option value="groceries">🛒 Groceries</option>
+								<option value="transport">🚗 Transportation</option>
+								<option value="fuel">⛽ Fuel</option>
+								<option value="rent">🏠 Rent</option>
+								<option value="bills">💡 Bills & Utilities</option>
+								<option value="shopping">🛍️ Shopping</option>
+								<option value="health">💊 Healthcare</option>
+								<option value="education">🎓 Education</option>
+								<option value="entertainment">🎬 Entertainment</option>
+								<option value="travel">✈️ Travel</option>
+								<option value="emi">💳 EMI / Loan</option>
+								<option value="investment">📈 Investment</option>
+								<option value="other">📦 Other</option>
+							</select>
+						</div>
+					</div>
+					<button>Save Transactions</button>
+				</form>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
