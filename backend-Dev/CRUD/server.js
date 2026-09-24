@@ -29,7 +29,19 @@ app.delete('/delete/:id', (req, res) => {
     
     let userData = users.filter((val) =>val.id !== id)
     users = userData
-    res.send(users)
+    res.send(userData)
+})
+
+// update
+app.put('/update/:id', (req, res) => {
+    let { id } = req.params;
+    let {name} = req.body
+
+    let updatedUser = users.map((val) =>
+        val.id === id ? { ...val , name } : val
+    )
+
+    res.send(updatedUser)
 })
 
 app.listen(port, () => {
