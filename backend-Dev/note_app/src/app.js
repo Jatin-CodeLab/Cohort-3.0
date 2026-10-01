@@ -1,8 +1,7 @@
 const express = require("express");
-const NewModel = require('./models/note.models');
 const connectionDB = require("./config/db");
 const createNoteController = require('./controller/note.controller');
-
+const notesRoute = require('./routes/note.route') 
 
 const app = express()
 connectionDB()
@@ -12,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('ok')
 })
 
+app.use('/notes',notesRoute)
 
-app.post("/create", createNoteController);
 
 module.exports  = app
