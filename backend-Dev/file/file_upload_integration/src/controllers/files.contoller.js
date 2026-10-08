@@ -1,7 +1,9 @@
 const create = (req, res) => {
-    console.log('hare krishna');
-    console.log(req.body);
-    
-}
+	console.log("REQUEST AAYI");
+	console.log(req.body);
+	console.log(req.file);
 
-module.exports = create
+	res.status(200).send("data mil gaya");
+};
+
+module.exports = create;
