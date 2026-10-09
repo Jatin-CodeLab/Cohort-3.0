@@ -10,7 +10,9 @@ function App() {
 
 		formData.append("name", data.name);
 		formData.append("email", data.email);
-		formData.append("profilePic", data.profpic[0]);
+		 for (const file of data.files) {
+				formData.append("file", file);
+			}
 
 		await axios.post("http://localhost:3000/user/create", formData);
 	};
@@ -20,7 +22,7 @@ function App() {
 			<form className="flex flex-col" onSubmit={handleSubmit(submitHandler)}>
 				<input {...register("name")} type="text" placeholder="enter name" />
 				<input {...register("email")} type="email" placeholder="enter email" />
-				<input {...register("profpic")} type="file" placeholder="enter pic" />
+				<input {...register("file")} multiple type="file" placeholder="enter pic" />
 				<input type="submit" placeholder="enter pic" />
 			</form>
 		</div>
